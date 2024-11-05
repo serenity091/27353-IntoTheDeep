@@ -2,6 +2,7 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.hardware.bosch.BHI260IMU;
 import com.qualcomm.hardware.rev.RevHubOrientationOnRobot;
+import com.qualcomm.hardware.sparkfun.SparkFunOTOS;
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.eventloop.opmode.TeleOp;
 import com.qualcomm.robotcore.hardware.DcMotor;
@@ -16,7 +17,7 @@ import org.firstinspires.ftc.robotcore.external.navigation.YawPitchRollAngles;
 
 import java.util.ArrayList;
 
-@TeleOp(name = "Ver.1.1")
+@TeleOp(name = "Ver.1.2")
 public class TeleOp1 extends LinearOpMode {
     @Override
     public void runOpMode() throws InterruptedException {
@@ -48,6 +49,8 @@ public class TeleOp1 extends LinearOpMode {
 
         FL.setDirection(DcMotorSimple.Direction.REVERSE);
         BL.setDirection(DcMotorSimple.Direction.REVERSE);
+
+        SparkFunOTOS myOtos;
 
         BHI260IMU imu;
         Orientation angles;
